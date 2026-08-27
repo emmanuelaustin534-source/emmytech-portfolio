@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -14,9 +14,24 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white backdrop-blur-md border-b border-navy/10">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-white/40 backdrop-blur-xl border-b border-white/30 shadow-lg shadow-navy/5"
+          : "bg-transparent backdrop-blur-0 border-b border-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
         <Link href="/" className="text-2xl font-bold text-navy">
           Emmy<span className="text-orange">Tech</span>
