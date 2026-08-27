@@ -1,3 +1,11 @@
+@theme {
+  --color-navy: #0a1a2f;
+  --color-navy-light: #102841;
+  --color-orange: #ff5a1f;
+  --color-orange-dark: #e6470f;
+  --color-cream: #fdf6ee;
+}
+
 @import "tailwindcss";
 
 :root {
