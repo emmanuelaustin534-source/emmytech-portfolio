@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -33,8 +34,15 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-        <Link href="/" className="text-2xl font-bold text-navy">
-          Emmy<span className="text-orange">Tech</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="EmmyTech"
+            width={220}
+            height={70}
+            className="h-20 w-auto"
+            priority
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">

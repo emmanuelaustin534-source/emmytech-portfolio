@@ -1,13 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="bg-navy text-cream/70 pt-16 pb-8 px-6 border-t border-white/10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
-          <h3 className="text-2xl font-bold text-cream mb-3">
-            Emmy<span className="text-orange">Tech</span>
-          </h3>
+          <Image
+            src="/logo-light.png"
+            alt="EmmyTech"
+            width={220}
+            height={70}
+            className="h-16 w-auto mb-3"
+          />
           <p className="text-sm leading-relaxed">
             Full-stack developer crafting fast, modern web experiences and
             AI-powered automations that help businesses grow.
