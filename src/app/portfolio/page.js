@@ -15,6 +15,22 @@ const projects = [
     description:
       "An n8n automation managing Shopify Cash-On-Delivery and No-Delivery-Return orders, fully synced with Airtable — checking for new COD orders hourly, assigning them to staff evenly, and auto-updating shipping status. NDR orders are processed each morning, logged, and reassigned for follow-up.",
   },
+  {
+    title: "Personal AI Assistant for Tasks, Reminders & Translation",
+    category: "AI Automation",
+    tag: "n8n Automation",
+    image: "/projects/n8n-personal-ai-assistant.jpg",
+    description:
+      "A private AI assistant built with n8n, similar to ChatGPT but with extra features. Users type simple commands which are processed and understood, automatically adding tasks to Google Calendar, translating messages between English and French, emailing a daily task list every morning, and setting reminders — fully private and self-owned.",
+  },
+  {
+    title: "3Cricket — Coaching Academy Website",
+    category: "WordPress",
+    tag: "WordPress Build",
+    image: "/projects/wordpress-3cricket.jpg",
+    description:
+      "A modern, user-friendly website designed for 3Cricket, a dynamic cricket coaching academy founded by former professional cricketer and ECB Level III coach Jason de la Peña. Showcases comprehensive programs, an experienced coaching team, and a commitment to women's cricket — including ECB-accredited programs, overseas tours, and university pathways.",
+  },
 ];
 
 export default function Portfolio() {
