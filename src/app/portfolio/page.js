@@ -2,16 +2,19 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const categories = ["All", "Full-Stack", "AI Automation", "WordPress", "UI/UX"];
 
 const projects = [
-  { title: "Project One", category: "Full-Stack", tag: "Full-Stack Web App" },
-  { title: "Project Two", category: "AI Automation", tag: "AI Automation" },
-  { title: "Project Three", category: "WordPress", tag: "WordPress Build" },
-  { title: "Project Four", category: "Full-Stack", tag: "Full-Stack Web App" },
-  { title: "Project Five", category: "AI Automation", tag: "AI Agent" },
-  { title: "Project Six", category: "UI/UX", tag: "UI/UX Design" },
+  {
+    title: "Shopify COD & NDR Order Workflow (Airtable + n8n)",
+    category: "AI Automation",
+    tag: "n8n Automation",
+    image: "/projects/n8n-shopify-cod-ndr.jpg",
+    description:
+      "An n8n automation managing Shopify Cash-On-Delivery and No-Delivery-Return orders, fully synced with Airtable — checking for new COD orders hourly, assigning them to staff evenly, and auto-updating shipping status. NDR orders are processed each morning, logged, and reassigned for follow-up.",
+  },
 ];
 
 export default function Portfolio() {
@@ -69,14 +72,32 @@ export default function Portfolio() {
                 transition={{ duration: 0.4 }}
                 className="group cursor-pointer"
               >
-                <div className="aspect-video rounded-2xl bg-gradient-to-br from-navy to-navy-light flex items-center justify-center mb-4 overflow-hidden relative">
-                  <p className="text-cream/40 text-sm">Image Coming Soon</p>
+                <div className="aspect-video rounded-2xl mb-4 overflow-hidden relative bg-navy">
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <p className="text-cream/40 text-sm">Image Coming Soon</p>
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-orange/0 group-hover:bg-orange/10 transition-colors duration-300" />
                 </div>
                 <p className="text-orange text-sm font-medium mb-1">
                   {project.tag}
                 </p>
-                <h3 className="text-lg font-bold text-navy">{project.title}</h3>
+                <h3 className="text-lg font-bold text-navy mb-2">
+                  {project.title}
+                </h3>
+                {project.description && (
+                  <p className="text-navy/60 text-sm leading-relaxed">
+                    {project.description}
+                  </p>
+                )}
               </motion.div>
             ))}
           </AnimatePresence>
