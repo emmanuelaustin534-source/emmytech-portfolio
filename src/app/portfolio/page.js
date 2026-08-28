@@ -31,6 +31,38 @@ const projects = [
     description:
       "A modern, user-friendly website designed for 3Cricket, a dynamic cricket coaching academy founded by former professional cricketer and ECB Level III coach Jason de la Peña. Showcases comprehensive programs, an experienced coaching team, and a commitment to women's cricket — including ECB-accredited programs, overseas tours, and university pathways.",
   },
+  {
+    title: "AuditBull — SaaS Website",
+    category: "WordPress",
+    tag: "WordPress Build",
+    image: "/projects/auditbull-saas.jpg",
+    description:
+      "A dark-themed, modern website designed for AuditBull, an emerging SaaS security and compliance auditing company. Built to be visually striking, functional, and conversion-oriented, reflecting the high-tech nature of their product while delivering an excellent user experience.",
+  },
+  {
+    title: "Thrive Life — Food Website Development",
+    category: "WordPress",
+    tag: "WordPress Build",
+    image: "/projects/wordpress-thrive-life.jpg",
+    description:
+      "A clean, user-friendly website built for Thrive Life, promoting healthy living with an optimized product display and fully responsive design. Special attention was given to highlighting the brand's community impact  supporting communities, building schools, and empowering women in developing countries.",
+  },
+  {
+    title: "Synergy Pest Control Website",
+    category: "WordPress",
+    tag: "WordPress Build",
+    image: "/projects/wordpress-synergy-pest.jpg",
+    description:
+      "A clean, modern, and user-friendly website designed for Synergy Pest Control, highlighting their innovative pest control services with clear navigation and engaging visuals. Built fully mobile responsive and SEO optimized, making it easy for visitors to find solutions to keep their homes pest-free.",
+  },
+  {
+    title: "ETECH HUB — Digital Services UI/UX Design",
+    category: "UI/UX",
+    tag: "UI/UX Design",
+    image: "/projects/uiux-etech-hub.jpg",
+    description:
+      "A UI/UX design for ETECH HUB, a digital services platform empowering businesses through technology. The interface highlights core offerings.. web design, mobile app design, and digital training  alongside client testimonials and a clean call-to-action to help businesses transform their digital presence.",
+  },
 ];
 
 export default function Portfolio() {

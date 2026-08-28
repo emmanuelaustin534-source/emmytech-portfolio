@@ -326,9 +326,21 @@ export default function Home() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: "Project One", tag: "Full-Stack Web App" },
-              { title: "Project Two", tag: "AI Automation" },
-              { title: "Project Three", tag: "WordPress Build" },
+              {
+                title: "3Cricket — Coaching Academy Website",
+                tag: "WordPress Build",
+                image: "/projects/wordpress-3cricket.jpg",
+              },
+              {
+                title: "ETECH HUB — Digital Services UI/UX Design",
+                tag: "UI/UX Design",
+                image: "/projects/uiux-etech-hub.jpg",
+              },
+              {
+                title: "Shopify COD & NDR Order Workflow",
+                tag: "n8n Automation",
+                image: "/projects/n8n-shopify-cod-ndr.jpg",
+              },
             ].map((project, i) => (
               <motion.div
                 key={project.title}
@@ -338,8 +350,13 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="group cursor-pointer"
               >
-                <div className="aspect-video rounded-2xl bg-gradient-to-br from-navy to-navy-light flex items-center justify-center mb-4 overflow-hidden relative">
-                  <p className="text-cream/40 text-sm">Image Coming Soon</p>
+                <div className="aspect-video rounded-2xl mb-4 overflow-hidden relative bg-navy">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                   <div className="absolute inset-0 bg-orange/0 group-hover:bg-orange/10 transition-colors duration-300" />
                 </div>
                 <p className="text-orange text-sm font-medium mb-1">
