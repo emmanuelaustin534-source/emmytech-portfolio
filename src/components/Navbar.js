@@ -40,7 +40,7 @@ export default function Navbar() {
             alt="EmmyTech"
             width={220}
             height={70}
-            className="h-20 w-auto"
+            className="h-12 sm:h-16 md:h-20 w-auto"
             priority
           />
         </Link>
