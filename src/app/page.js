@@ -164,12 +164,12 @@ export default function Home() {
               Hey there,
             </p>
             <h1 className="hero-heading text-4xl sm:text-5xl md:text-6xl font-bold text-navy leading-tight mb-6">
-              I&apos;m Emmy
+              I&apos;m Emmanuel
             </h1>
             <p className="hero-paragraph text-navy/70 text-lg mb-8 max-w-md">
               A full-stack developer building fast, modern web experiences with
-              React, Next.js &amp; Tailwind — and powering businesses with
-              custom AI automations and AI agents.
+              React, Next.js &amp; Tailwind, and powering businesses with custom
+              AI automations and AI agents.
             </p>
 
             <div className="hero-buttons flex flex-wrap gap-4">
